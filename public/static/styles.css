@@ -1,0 +1,443 @@
+/* Local SEO Spinner Pro - Custom Styles */
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Custom Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+  40%, 43% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -30px, 0);
+  }
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -15px, 0);
+  }
+  90% {
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+/* Tab Content Animation */
+.tab-content {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Button Hover Effects */
+.nav-btn {
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.nav-btn.active {
+  animation: pulse 2s infinite;
+}
+
+/* Form Input Focus Effects */
+input:focus, 
+textarea:focus, 
+select:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+/* Loading Animation */
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Card Hover Effects */
+.service-card,
+.area-card,
+.template-card {
+  transition: all 0.3s ease;
+}
+
+.service-card:hover,
+.area-card:hover,
+.template-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Progress Bar Styles */
+.progress-bar {
+  background: linear-gradient(90deg, #3B82F6, #8B5CF6);
+  height: 4px;
+  border-radius: 2px;
+  animation: pulse 2s infinite;
+}
+
+/* Notification Styles */
+.notification {
+  backdrop-filter: blur(10px);
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Content Grid */
+.content-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .nav-btn {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+  }
+  
+  .nav-btn i {
+    display: none;
+  }
+}
+
+/* Custom Checkbox Styles */
+input[type="checkbox"] {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.25rem;
+  background: rgba(255, 255, 255, 0.1);
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="checkbox"]:checked {
+  background: #3B82F6;
+  border-color: #3B82F6;
+}
+
+input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+/* SEO Score Badge Styles */
+.seo-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.seo-badge.excellent {
+  background: linear-gradient(135deg, #10B981, #059669);
+  color: white;
+}
+
+.seo-badge.good {
+  background: linear-gradient(135deg, #F59E0B, #D97706);
+  color: white;
+}
+
+.seo-badge.needs-improvement {
+  background: linear-gradient(135deg, #EF4444, #DC2626);
+  color: white;
+}
+
+/* Content Preview Styles */
+.content-preview {
+  max-height: 200px;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  line-height: 1.6;
+}
+
+.content-preview::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Export Button Styles */
+.export-btn {
+  background: linear-gradient(135deg, #8B5CF6, #7C3AED);
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.export-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.export-btn:hover::before {
+  left: 100%;
+}
+
+.export-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+}
+
+/* Analytics Chart Styles */
+.chart-container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.chart-bar {
+  background: linear-gradient(135deg, #3B82F6, #1D4ED8);
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+.chart-bar:hover {
+  background: linear-gradient(135deg, #2563EB, #1E40AF);
+  transform: scaleY(1.1);
+}
+
+/* Stats Card Styles */
+.stat-card {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #3B82F6, #8B5CF6);
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #3B82F6, #8B5CF6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Table Styles */
+.content-table {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.content-table th {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+}
+
+.content-table td {
+  padding: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.content-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Form Section Styling */
+.form-section {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.form-section h3 {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.form-section h3 i {
+  margin-right: 0.5rem;
+  color: #3B82F6;
+}
+
+/* Success Animation */
+.success-animation {
+  animation: bounce 1s;
+}
+
+/* Error States */
+.error-state {
+  border-color: #EF4444 !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+}
+
+/* Loading States */
+.loading-skeleton {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.1) 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Mobile Optimizations */
+@media (max-width: 640px) {
+  .form-section {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .stat-card {
+    padding: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .content-table {
+    font-size: 0.875rem;
+  }
+  
+  .content-table th,
+  .content-table td {
+    padding: 0.5rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white !important;
+  }
+  
+  .nav-btn,
+  .export-btn,
+  button {
+    display: none !important;
+  }
+  
+  .bg-white\/10,
+  .bg-white\/20 {
+    background: white !important;
+    border: 1px solid #ccc !important;
+  }
+  
+  .text-white {
+    color: black !important;
+  }
+}

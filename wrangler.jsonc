@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "local-seo-spinner",
+  "main": "src/index.tsx",
+  "compatibility_date": "2025-08-29",
+  "compatibility_flags": ["nodejs_compat"],
+  "pages_build_output_dir": "./dist",
+  
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "local-seo-production",
+      "database_id": ""
+    }
+  ],
+
+  "ai": {
+    "binding": "AI"
+  }
+}
